@@ -1,146 +1,157 @@
-# Pulse Studios™
+# Pulse Studios™ — 2026
 
-Built by real people, real work, real passion. Everything here is hand-made, thought out, and crafted with intention.
+**Built by real people, real work, real passion.**  
+Everything here is hand‑made, thought out, and crafted with intention. No shortcuts, no auto‑generated noise. Just us, creating what feels right.
 
-## Project Overview
+## 📋 Platform Overview
 
-A full-stack web application with:
-- **Shop System** - Purchase digital items and rewards
-- **Roblox Integration** - Reward players in your Roblox game
-- **Discord Integration** - Manage rewards and give items in Discord servers
-- **AI Assistant** - Intelligent chatbot for customer support and interactions
-- **Authentication** - Secure user accounts with OAuth2
+A complete, modern, handcrafted digital platform featuring **15 integrated systems**:
 
-## Tech Stack
+### Core Systems
+1. **Dashboard** — Metrics, activity, quick stats
+2. **AI Assistant** — Full chat with history & personality
+3. **Shop System** — Browse, cart, checkout, subscriptions
+4. **Discord Integration** — OAuth, roles, verification
+5. **Subscriptions** — Plans, billing, management
+6. **Support System** — Tickets, categories, Discord sync
+7. **Blogs** — Articles, tags, author profiles
+8. **Account Settings** — Profile, security, connections
+9. **Admin Panel** — Product, blog, user management
+10. **Marketing Tools** — Banners, promos, referrals
+11. **Community Features** — Profiles, activity, comments
+12. **Policies & Notifications** — Terms, privacy, preferences
+13. **Footer** — Branding, links, newsletter
+14. **Store Tabs** — Categories, featured, trending
+15. **Security** — Sessions, devices, login history
 
-### Backend
-- **Node.js + Express** - REST API server
-- **MongoDB** - Database for users, items, transactions
-- **Axios** - HTTP client for Roblox/Discord APIs
-- **OpenAI API** - AI assistant (ChatGPT)
-- **JWT** - Authentication tokens
+---
 
-### Frontend
-- **React 18** - UI components
-- **Vite** - Fast build tool
-- **Axios** - API requests
-- **Tailwind CSS** - Styling
-
-### External APIs
-- **Roblox Open Cloud API** - Give items to players
-- **Discord Bot API** - Server management and item distribution
-- **OpenAI API** - AI assistant
-
-## Project Structure
+## 🗂️ Project Structure
 
 ```
-.
-├── server/                 # Node.js Express backend
-│   ├── config/            # Configuration files
-│   ├── models/            # MongoDB schemas
-│   ├── routes/            # API endpoints
-│   ├── services/          # Business logic
-│   │   ├── roblox.js      # Roblox integration
-│   │   ├── discord.js     # Discord bot integration
-│   │   ├── shop.js        # Shop logic
-│   │   └── ai.js          # AI assistant
-│   ├── middleware/        # Auth, logging
-│   └── app.js             # Express setup
-├── client/                # React frontend
+Pulse-Studios-/
+├── frontend/                    # React 18 + TypeScript
+│   ├── public/
+│   │   └── assets/
+│   │       ├── logos/           # Editable SVG logos
+│   │       ├── icons/           # Icon library
+│   │       └── illustrations/
 │   ├── src/
-│   │   ├── components/    # React components
-│   │   ├── pages/         # Page components
-│   │   ├── hooks/         # Custom hooks
-│   │   └── App.jsx        # Main app
-│   └── index.html
-├── docs/                  # Documentation
-├── .env.example           # Environment variables template
-├── package.json           # Dependencies
-└── docker-compose.yml     # Local dev environment
+│   │   ├── components/          # 50+ UI components
+│   │   ├── pages/               # All 15 systems as pages
+│   │   ├── layouts/             # Layout wrappers
+│   │   ├── hooks/               # Custom React hooks
+│   │   ├── context/             # Global state
+│   │   ├── utils/               # Utilities
+│   │   ├── services/            # API services
+│   │   ├── types/               # TypeScript types
+│   │   ├── brand/               # Branding system (EDITABLE)
+│   │   ├── styles/              # Global styles
+│   │   ├── App.tsx
+│   │   └── main.tsx
+│   ├── package.json
+│   ├── tsconfig.json
+│   ├── tailwind.config.ts
+│   ├── vite.config.ts
+│   └── .env.example
+│
+├── backend/                     # Node.js + Express + TypeScript
+│   ├── src/
+│   │   ├── config/              # Config files
+│   │   ├── models/              # MongoDB schemas (15 models)
+│   │   ├── routes/              # API routes
+│   │   ├── services/            # Business logic
+│   │   ├── middleware/          # Auth, validation
+│   │   ├── controllers/         # Request handlers
+│   │   ├── types/               # TypeScript types
+│   │   ├── utils/               # Utilities
+│   │   ├── app.ts
+│   │   └── server.ts
+│   ├── package.json
+│   ├── tsconfig.json
+│   └── .env.example
+│
+├── docs/
+│   ├── BRANDING.md              # Branding system
+│   ├── API.md                   # API documentation
+│   ├── SETUP.md                 # Setup guide
+│   ├── ARCHITECTURE.md          # Architecture
+│   └── DEPLOYMENT.md            # Deployment
+│
+├── package.json
+└── README.md
 ```
 
-## Features
+---
 
-### 1. Shop System
-- Browse and purchase digital items
-- Multiple payment methods
-- Instant delivery
-- Transaction history
+## 🎨 Branding System (Fully Editable)
 
-### 2. Roblox Integration
-- Give items directly to Roblox players
-- Track Roblox account linkage
-- Verify ownership
-- Real-time status updates
+Located in `/frontend/src/brand/`:
 
-### 3. Discord Integration
-- Discord bot for server commands
-- Give roles/items to Discord members
-- Verify Discord account linkage
-- Leaderboards and stats
+- **colors.ts** — Primary, accent, backgrounds, text
+- **typography.ts** — Font families, sizes, weights
+- **spacing.ts** — Consistent 4px grid
+- **components.ts** — Component defaults
+- **themes.ts** — Light/dark mode
 
-### 4. AI Assistant
-- 24/7 customer support
-- Product recommendations
-- FAQ automation
-- Natural language processing
+All **logos and icons** are SVG-based and editable:
+- `/public/assets/logos/` — Brand logos (primary, secondary, icon, favicon)
+- `/public/assets/icons/` — Icon library (60+ icons across all systems)
 
-## Getting Started
+---
+
+## 🚀 Getting Started
 
 ### Prerequisites
 - Node.js 18+
-- MongoDB (local or Atlas)
-- Discord Bot Token
-- Roblox Open Cloud API Key
-- OpenAI API Key
+- MongoDB
+- Git
 
 ### Installation
 
-1. Clone repository
 ```bash
 git clone https://github.com/DirectorMarty/Pulse-Studios-.git
 cd Pulse-Studios-
-```
 
-2. Install dependencies
-```bash
-cd server && npm install
-cd ../client && npm install
-```
+# Install dependencies
+npm install
+cd frontend && npm install && cd ..
+cd backend && npm install && cd ..
 
-3. Setup environment variables
-```bash
-cp .env.example .env
-# Edit .env with your API keys
-```
+# Setup environment
+cp backend/.env.example backend/.env
+cp frontend/.env.example frontend/.env
 
-4. Start development servers
-```bash
-# Terminal 1 - Backend
-cd server
-npm run dev
-
-# Terminal 2 - Frontend
-cd client
+# Start development
 npm run dev
 ```
 
-5. Access the application
+Access:
 - Frontend: http://localhost:5173
-- Backend API: http://localhost:5000
+- API: http://localhost:5000
+- Admin: http://localhost:5173/admin
 
-## API Documentation
+---
 
-See [API_DOCS.md](./docs/API_DOCS.md) for complete endpoint documentation.
+## 📚 Full System Documentation
 
-## Configuration
+See `/docs/` for complete guides:
+- **[BRANDING.md](./docs/BRANDING.md)** — Customization guide
+- **[API.md](./docs/API.md)** — API endpoints
+- **[SETUP.md](./docs/SETUP.md)** — Full setup
+- **[ARCHITECTURE.md](./docs/ARCHITECTURE.md)** — System design
+- **[DEPLOYMENT.md](./docs/DEPLOYMENT.md)** — Production
 
-See [CONFIGURATION.md](./docs/CONFIGURATION.md) for detailed setup guides for each integration.
+---
 
-## Contributing
+## 🛠️ Tech Stack
 
-Contributions welcome! Please follow our code style and submit PRs.
+**Frontend**: React 18, TypeScript, Vite, Tailwind CSS, Zustand, Axios, React Router, Framer Motion
 
-## License
+**Backend**: Node.js, Express, TypeScript, MongoDB, Mongoose, JWT, Stripe, Discord.js, OpenAI
 
-Proprietary - All rights reserved
+---
+
+## © 2026 Pulse Studios™
+
+Built with intention. Crafted with care. No shortcuts.
